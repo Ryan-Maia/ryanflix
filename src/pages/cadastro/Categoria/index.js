@@ -40,8 +40,6 @@ function CadastroCategoria() {
 	}
 
 	useEffect(()=>{
-		console.log("oi");
-		console.log(window.location);
 		const isLocalHost = window.location.hostname.includes('localhost')
 		const URL = isLocalHost ? 'https://localhost:8080/categorias' : 'https://ryanflix.herokuapp.com/categorias';
 		fetch(URL)
