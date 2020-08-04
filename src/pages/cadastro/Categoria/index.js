@@ -2,9 +2,9 @@ import React, { useState, useEffect} from 'react';
 import Default from '../../../templates/Default/index';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField/index';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
-	
 	
 
 	const valoresIniciais = {
@@ -12,36 +12,13 @@ function CadastroCategoria() {
 		descricao: '',
 		cor: '#ffffff'
 	}
+	const {setValores, valores, atualizarValores} = useForm(valoresIniciais);
 	const [categorias, setCategorias] = useState([]);
-	const [valores,setValores] = useState(valoresIniciais);
 	
-	function setValor(chave, valor) {
-		// chave: nome, descricao, bla, bli
-		setValores({
-		  ...valores,
-		  [chave]: valor, // nome: 'valor'
-		})
-	}
-
-
-
-	function atualizarValores(infosDoEvento) {
-		if(infosDoEvento.target.value){
-			infosDoEvento.target.classList.add('not-empty');
-			infosDoEvento.target.classList.remove('empty');
-		}else{
-			infosDoEvento.target.classList.add('empty');
-			infosDoEvento.target.classList.remove('not-empty');
-		}
-		setValor(
-			infosDoEvento.target.getAttribute('name'),
-			infosDoEvento.target.value
-		);
-	}
 
 	useEffect(()=>{
 		const isLocalHost = window.location.hostname.includes('localhost')
-		const URL = isLocalHost ? 'https://localhost:8080/categorias' : 'https://ryanflix.herokuapp.com/categorias';
+		const URL = isLocalHost ? 'http://localhost:8080/categorias' : 'https://ryanflix.herokuapp.com/categorias';
 		fetch(URL)
 		.then(async (response)=>{
 			const resposta = await response.json();
@@ -69,6 +46,7 @@ function CadastroCategoria() {
 						name="nome"
 						type="text"
 						label="Nome:"
+						required
 					/>
 
 					<br />
