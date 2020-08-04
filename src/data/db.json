@@ -2,23 +2,41 @@
     "categorias":[
         {
             "id": 1,
-            "nome":"Front End",
-            "descricao": "Uma Categoria Bacanudassa",
+            "titulo":"Filipe Deschamps",
+            "descricao": "Um programador preguiçoso",
             "cor": "#cbd1ff"
+        },
+        {
+            "id": 2,
+            "titulo":"Back End",
+            "descricao": "Uma Categoria Bacanudassa",
+            "cor": "#065fd4"
         }
     ],
     "videos": [
         {
             "id": 1,
             "categoriaId": 1,
-            "titulo": "SEO com React",
-            "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+            "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
+            "url": "https://youtu.be/kjhu1LEmRpY"
         },
         {
             "id": 2,
             "categoriaId": 1,
-            "titulo": "SEO com React",
-            "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
+            "titulo": "Eu quero saber se você consegue responder essas 3 perguntas de JavaScript!",
+            "url": "https://youtu.be/QVrrqgDhhu4"
+        },
+        {
+            "id": 3,
+            "categoriaId": 1,
+            "titulo": "FILIPE DESCHAMPS",
+            "url": "https://www.youtube.com/watch?v=_hobgOFDekg"
+        },
+        {
+            "id": 4,
+            "categoriaId": 1,
+            "titulo": "Os 3 Livros Que Fizeram Eu Não Desistir da Programação (e o que aprendi com eles)",
+            "url": "https://youtu.be/Uh0Kn2aXEqY"
         }
     ]
 }

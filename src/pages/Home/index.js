@@ -12,6 +12,7 @@ function Home(){
 	useEffect(()=>{
 		categoriasRepository.getAllWithVideos()
 		.then((response)=>{
+			
 			setDadosIniciais(response);
 		})
 	},[]);
@@ -21,32 +22,43 @@ function Home(){
 			<div style={{ background: '#141414' }}>
 				<Menu homePage />
 				{dadosIniciais.length === 0 && (<div>Loading...</div>)}
-				{ dadosIniciais.map((categoria, indice)=>{
-					
-					if(indice === 0){
-						
-						return (
+				{dadosIniciais.length > 1 && (
+					<>
+					{dadosIniciais.map((categoria,indice)=>{
+						if(indice === 0){
+							{console.log(categoria)}
+							return (
 							<>
 								<BannerMain
 									videoTitle={dadosIniciais[0].videos[0].titulo}
 									url={dadosIniciais[0].videos[0].url}
 									videoDescription="O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"
 								/>
-								<Carousel 
-									ignoreFirstVideo 
-									category={dadosIniciais[0]} 
+								<Carousel
+									ignoreFirstVideo
+									category={categoria}
 								/>
 							</>
-							
 						)
-					}
-					return(
-						<Carousel
-							key={categoria.id}
-							category={categoria}
-						/>
-					)
-				})}
+						}else{
+							return(
+								<Carousel
+									key={categoria.id}
+									category={categoria}
+								/>
+							)
+						}
+					})}
+					</>
+				)}
+				{/* { dadosIniciais.map((categoria, indice)=>{ */}
+					{/*  */}
+					
+						{/*  */}
+						
+					{/* } */}
+					
+				{/* })} */}
 				
 
 				
