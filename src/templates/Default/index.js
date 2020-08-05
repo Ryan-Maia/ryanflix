@@ -4,13 +4,12 @@ import Footer from '../../components/Footer/index'
 import styled from 'styled-components';
 
 const Main = styled.main`
-background-color: ${props => props.white ? "white" : "black"};
-color: ${props => props.white ? "black" : "white"};
-flex: 1;
-padding-top:50px;
-padding-left:5%;
-padding-right:5%;
-
+    background-color: ${props => props.white ? "white" : "black"};
+    color: ${props => props.white ? "black" : "white"};
+    flex: 1;
+    padding-top:50px;
+    padding-left:5%;
+    padding-right:5%;
 `
 
 function Default({children, white}){

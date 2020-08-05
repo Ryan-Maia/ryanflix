@@ -26,7 +26,6 @@ function Home(){
 					<>
 					{dadosIniciais.map((categoria,indice)=>{
 						if(indice === 0){
-							{console.log(categoria)}
 							return (
 							<>
 								<BannerMain

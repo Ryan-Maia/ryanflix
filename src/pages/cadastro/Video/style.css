@@ -1,0 +1,11 @@
+#centerDiv{
+    margin:auto;
+    align-content: center;
+    width: 600px;
+    height:400px;
+    margin-bottom: 100px;
+}
+#imagePreview{
+    width:inherit;
+    height: 100%;
+}
