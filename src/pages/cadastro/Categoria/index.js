@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import Default from '../../../templates/Default/index';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField/index';
+import SubmitButton from '../../../components/SubmitButton/index';
 import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
@@ -68,9 +69,7 @@ function CadastroCategoria() {
 						type="color"
 						label="Cor:"
 					/>
-					<div className="button-div">
-						<button className="submit-btn">Cadastrar</button>
-					</div>
+					<SubmitButton>Cadastrar</SubmitButton>
 				</form>
 			</div>
 

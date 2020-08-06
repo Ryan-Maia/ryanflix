@@ -45,20 +45,6 @@
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
-.submit-btn {
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    font-family: Raleway, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 16px;
-    line-height: 24px;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-}
-
 
 .color-input{
     padding-left:20px;

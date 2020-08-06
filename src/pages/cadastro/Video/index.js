@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useForm from '../../../hooks/useForm';
 import Default from '../../../templates/Default/index';
 import FormField from '../../../components/FormField/index';
+import SubmitButton from '../../../components/SubmitButton/index';
 import './style.css';
 function CadastroVideo() {
 
@@ -31,7 +32,6 @@ function CadastroVideo() {
 			<div>
 				<h1>Cadástro de Vídeo: {valores.nome}</h1>
 				<form>
-
 					<FormField 
 						value={valores.nome}
 						onChange={atualizarValores}
@@ -48,7 +48,7 @@ function CadastroVideo() {
 						label="Url:"
 						required
 					/>
-
+					<SubmitButton>Cadastrar</SubmitButton>
 				</form>
 				<Link to="/cadastro/categoria">Cadastro de categorias</Link>
 			</div>

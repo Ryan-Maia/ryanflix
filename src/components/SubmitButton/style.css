@@ -1,0 +1,19 @@
+.submit-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-family: Raleway, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+#center-div{
+    text-align: center;
+    width:100%;
+    margin:auto;
+    align-content: center;
+}
