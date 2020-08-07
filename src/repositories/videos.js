@@ -1,5 +1,5 @@
 function create(videoData){
-    
+    videoData.categoriaId = parseInt(videoData.categoriaId);
     const isLocalHost = window.location.hostname.includes('localhost')
     const URL = isLocalHost ? 'http://localhost:8080/videos' : 'https://ryanflix.herokuapp.com/videos';
     return fetch(URL,{

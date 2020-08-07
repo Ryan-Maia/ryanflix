@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 
-function FormField({value ,onChange, type, name, label, required}){
+function FormField({value ,onChange, type, name, label, required, selectData}){
     if(type==="color"){
         return(
             <div className="color-input">
@@ -12,7 +12,20 @@ function FormField({value ,onChange, type, name, label, required}){
                 
             </div>
         )
-    }else{
+    }else if(type==="select"){
+        return(
+            <select name={name} onChange={onChange} selected={value} >
+                {selectData.map((row)=>{
+                    return(
+                        <option  value={row.id} key={row.id} >{row.titulo} </option>
+                    )
+                })}
+                
+            </select>
+        )
+
+    }
+    else{
         return(
 
             <div className="contact-form row">

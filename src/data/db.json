@@ -1,42 +1,78 @@
 {
-    "categorias":[
-        {
-            "id": 1,
-            "titulo":"Filipe Deschamps",
-            "descricao": "Um programador preguiçoso",
-            "cor": "#cbd1ff"
-        },
-        {
-            "id": 2,
-            "titulo":"Back End",
-            "descricao": "Uma Categoria Bacanudassa",
-            "cor": "#065fd4"
-        }
-    ],
-    "videos": [
-        {
-            "id": 1,
-            "categoriaId": 1,
-            "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
-            "url": "https://youtu.be/kjhu1LEmRpY"
-        },
-        {
-            "id": 2,
-            "categoriaId": 1,
-            "titulo": "Eu quero saber se você consegue responder essas 3 perguntas de JavaScript!",
-            "url": "https://youtu.be/QVrrqgDhhu4"
-        },
-        {
-            "id": 3,
-            "categoriaId": 1,
-            "titulo": "FILIPE DESCHAMPS",
-            "url": "https://www.youtube.com/watch?v=_hobgOFDekg"
-        },
-        {
-            "id": 4,
-            "categoriaId": 1,
-            "titulo": "Os 3 Livros Que Fizeram Eu Não Desistir da Programação (e o que aprendi com eles)",
-            "url": "https://youtu.be/Uh0Kn2aXEqY"
-        }
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "titulo": "Filipe Deschamps",
+      "descricao": "Um programador preguiçoso",
+      "cor": "#cbd1ff"
+    },
+    {
+      "id": 2,
+      "titulo": "Back End",
+      "descricao": "Uma Categoria Bacanudassa",
+      "cor": "#065fd4"
+    },
+    {
+      "titulo": "Músicas",
+      "descricao": "Músicas boas para ouvir enquanto programa",
+      "cor": "#ffb957",
+      "id": 3
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoriaId": 1,
+      "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
+      "url": "https://youtu.be/kjhu1LEmRpY"
+    },
+    {
+      "id": 2,
+      "categoriaId": 1,
+      "titulo": "Eu quero saber se você consegue responder essas 3 perguntas de JavaScript!",
+      "url": "https://youtu.be/QVrrqgDhhu4"
+    },
+    {
+      "id": 3,
+      "categoriaId": 1,
+      "titulo": "FILIPE DESCHAMPS",
+      "url": "https://www.youtube.com/watch?v=_hobgOFDekg"
+    },
+    {
+      "id": 4,
+      "categoriaId": 1,
+      "titulo": "Os 3 Livros Que Fizeram Eu Não Desistir da Programação (e o que aprendi com eles)",
+      "url": "https://youtu.be/Uh0Kn2aXEqY"
+    },
+    {
+      "categoriaId": 1,
+      "titulo": "Next Level GitHub Profile",
+      "url": "https://www.youtube.com/watch?v=ECuqb5Tv9qI",
+      "id": 5
+    },
+    {
+      "categoriaId": 1,
+      "titulo": "Músiquinha Low Fi",
+      "url": "https://www.youtube.com/watch?v=cMai6ZxVgYo",
+      "id": 6
+    },
+    {
+      "categoriaId": "3",
+      "titulo": "Jack Stauber - Pop Food (2017) (Full Album)",
+      "url": "https://www.youtube.com/watch?v=40R49TvD_FM",
+      "id": 7
+    },
+    {
+      "categoriaId": "3",
+      "titulo": "Cool With You",
+      "url": "https://www.youtube.com/watch?v=0nCYgT-rVSo",
+      "id": 8
+    },
+    {
+      "categoriaId": 3,
+      "titulo": "Electric Guest - Troubleman",
+      "url": "https://www.youtube.com/watch?v=3OC2aPCuzjo",
+      "id": 9
+    }
+  ]
 }

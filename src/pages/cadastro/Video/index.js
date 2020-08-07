@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import useForm from '../../../hooks/useForm';
 import Default from '../../../templates/Default/index';
 import FormField from '../../../components/FormField/index';
 import SubmitButton from '../../../components/SubmitButton/index';
 import videosRepository from '../../../repositories/videos';
+import categoriasRepository from '../../../repositories/categorias';
 import './style.css';
 function CadastroVideo() {
 	const history = useHistory();
 	const valoresIniciais = {
 		titulo: '',
 		url: '',
+		categoriaId: '1'
 	}
+	const [categorias, setCategorias] = useState([]);
 	const {setValores, valores, atualizarValores} = useForm(valoresIniciais);
 	
+	useEffect(()=>{
+		
+		categoriasRepository.getAll()
+		.then((response)=>{
+			setCategorias(response)
+		})
+	},[])
+
 	function videoTemplatePreview(value){
+		console.log(value);
 		if(value.length>32){
 			const videoURL = value.substring(32,value.length);
 			if(videoURL.length===11){
@@ -31,12 +43,12 @@ function CadastroVideo() {
   	return (
 		<Default white>
 			<div>
-				<h1>Cadástro de Vídeo: {valores.nome}</h1>
+				<h1>Cadástro de Vídeo: {valores.titulo}</h1>
 				<form onSubmit={(e)=>{
 					e.preventDefault();
 					alert("Vídeo Cadastrado Com Sucesso!");
 					videosRepository.create({
-						categoriaId: 1,
+						categoriaId: valores.categoriaId,
 						titulo: valores.titulo,
 						url: valores.url,
 						
@@ -60,6 +72,15 @@ function CadastroVideo() {
 						name="url"
 						type="text"
 						label="Url:"
+						required
+					/>
+					<FormField 
+						value={valores.categoriaId}
+						onChange={atualizarValores}
+						name="categoriaId"
+						type="select"
+						label="Categoria:"
+						selectData = {categorias}
 						required
 					/>
 					<SubmitButton>Cadastrar</SubmitButton>

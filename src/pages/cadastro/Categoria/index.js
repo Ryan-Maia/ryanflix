@@ -1,15 +1,16 @@
 import React, { useState, useEffect} from 'react';
 import Default from '../../../templates/Default/index';
-import { Link } from 'react-router-dom';
+import { Link, useHistory} from 'react-router-dom';
 import FormField from '../../../components/FormField/index';
 import SubmitButton from '../../../components/SubmitButton/index';
 import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
-	
+	const history = useHistory();
 
 	const valoresIniciais = {
-		nome: '',
+		titulo: '',
 		descricao: '',
 		cor: '#ffffff'
 	}
@@ -32,21 +33,32 @@ function CadastroCategoria() {
   	return (
 		<Default white>
 			<div>
-				<h1>Cadástro da categoria: {valores.nome}</h1>
+				<h1>Cadástro da categoria: {valores.titulo}</h1>
 				<form onSubmit={
 					function handleSubmit(event){
 						event.preventDefault();
 						setCategorias([...categorias, valores]);
 						setValores(valoresIniciais);
-
 						
+						alert("Categoria Cadastrada Com Sucesso!");
+						categoriasRepository.create({
+							titulo: valores.titulo,
+							descricao: valores.descricao,
+							cor: valores.cor,
+							
+						}).then(()=>{
+							console.log('Cadastrado com success');
+							history.push('/');
+						})
+
+					
 				}}>
 					<FormField 
-						value={valores.nome}
+						value={valores.titulo}
 						onChange={atualizarValores}
-						name="nome"
+						name="titulo"
 						type="text"
-						label="Nome:"
+						label="Título:"
 						required
 					/>
 
@@ -76,7 +88,7 @@ function CadastroCategoria() {
 			<ul>
 				{categorias.map((categoria,i)=>{
 					return (
-						<li key={i}>{categoria.nome} | {categoria.descricao} | <span style={{backgroundColor: categoria.cor}}>{categoria.cor}</span></li>
+						<li key={i}>{categoria.titulo} | {categoria.descricao} | <span style={{backgroundColor: categoria.cor}}>{categoria.cor}</span></li>
 					)
 				})}
 			</ul>
