@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useForm from '../../../hooks/useForm';
 import Default from '../../../templates/Default/index';
 import FormField from '../../../components/FormField/index';
 import SubmitButton from '../../../components/SubmitButton/index';
+import videosRepository from '../../../repositories/videos';
 import './style.css';
 function CadastroVideo() {
-
+	const history = useHistory();
 	const valoresIniciais = {
-		nome: '',
+		titulo: '',
 		url: '',
 	}
 	const {setValores, valores, atualizarValores} = useForm(valoresIniciais);
@@ -31,13 +32,26 @@ function CadastroVideo() {
 		<Default white>
 			<div>
 				<h1>Cadástro de Vídeo: {valores.nome}</h1>
-				<form>
+				<form onSubmit={(e)=>{
+					e.preventDefault();
+					alert("Vídeo Cadastrado Com Sucesso!");
+					videosRepository.create({
+						categoriaId: 1,
+						titulo: valores.titulo,
+						url: valores.url,
+						
+					}).then(()=>{
+						console.log('Cadastrado com success');
+						history.push('/');
+					})
+					
+				}}>
 					<FormField 
-						value={valores.nome}
+						value={valores.titulo}
 						onChange={atualizarValores}
-						name="nome"
+						name="titulo"
 						type="text"
-						label="Nome:"
+						label="Título:"
 						required
 					/>
 					<FormField 

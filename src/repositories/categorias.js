@@ -1,5 +1,3 @@
-
-
 function getAllWithVideos(){
     
     const isLocalHost = window.location.hostname.includes('localhost')

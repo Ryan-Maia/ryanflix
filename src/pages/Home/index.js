@@ -50,18 +50,6 @@ function Home(){
 					})}
 					</>
 				)}
-				{/* { dadosIniciais.map((categoria, indice)=>{ */}
-					{/*  */}
-					
-						{/*  */}
-						
-					{/* } */}
-					
-				{/* })} */}
-				
-
-				
-				{/* <Carousel category={dadosIniciais.categorias[1]} /> */}
 				<Footer />
 			</div>
 		</div>
