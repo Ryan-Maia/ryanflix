@@ -14,14 +14,17 @@ function FormField({value ,onChange, type, name, label, required, selectData}){
         )
     }else if(type==="select"){
         return(
-            <select name={name} onChange={onChange} selected={value} >
-                {selectData.map((row)=>{
-                    return(
-                        <option  value={row.id} key={row.id} >{row.titulo} </option>
-                    )
-                })}
-                
-            </select>
+            <>
+                <label>{label}</label><br />
+                <select name={name} onChange={onChange} selected={value} >
+                    {selectData.map((row)=>{
+                        return(
+                            <option  value={row.id} key={row.id} >{row.titulo} </option>
+                        )
+                    })}
+                    
+                </select>
+            </>
         )
 
     }

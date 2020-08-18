@@ -73,6 +73,36 @@
       "titulo": "Electric Guest - Troubleman",
       "url": "https://www.youtube.com/watch?v=3OC2aPCuzjo",
       "id": 9
+    },
+    {
+      "categoriaId": 3,
+      "titulo": "Musiquinha LowFi",
+      "url": "https://www.youtube.com/watch?v=CEs0jKNygqQ",
+      "id": 10
+    },
+    {
+      "categoriaId": 2,
+      "titulo": "Seja um Programador Back-End de Sucesso (dicas que gostaríamos ter recebido) // Vlog #98",
+      "url": "https://www.youtube.com/watch?v=TJ90DZjYdWI",
+      "id": 11
+    },
+    {
+      "categoriaId": 2,
+      "titulo": "Me veja programar um Backend que troca informação em tempo-real!",
+      "url": "https://www.youtube.com/watch?v=rc3SSOiwTns",
+      "id": 13
+    },
+    {
+      "categoriaId": 2,
+      "titulo": "Hide API Keys with a Node.js API Proxy + Caching, Rate Limiting and Slow Downs",
+      "url": "https://www.youtube.com/watch?v=nCWE6eonL7k",
+      "id": 14
+    },
+    {
+      "categoriaId": 3,
+      "titulo": "Ayasa-The Reason Why Piano cover on a cat extended version complete",
+      "url": "https://www.youtube.com/watch?v=Lxrx6SjQdEE",
+      "id": 15
     }
   ]
 }

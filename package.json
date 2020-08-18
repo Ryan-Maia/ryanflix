@@ -20,7 +20,7 @@
     "server": "node ./server.js",
     "dev": "concurrently \"react-scripts start\" \"node ./server.js\"",
     "start": "npm run server",
-    "test": "react-scripts test",
+    "test": "react-scripts start",
     "eject": "react-scripts eject"
     
   },
